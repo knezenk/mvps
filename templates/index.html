@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transcrição de Áudio</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Transcrição de Áudio</h1>
+        
+        <!-- Formulário de upload -->
+        <form id="uploadForm" enctype="multipart/form-data">
+            <input type="file" name="file" id="fileInput" required>
+            <button type="submit" id="submitBtn">Enviar Arquivo</button>
+        </form>
+        
+        <!-- Seção de progresso -->
+        <div id="progressSection" style="display: none;">
+            <h2>Progresso:</h2>
+
+            <!-- Contêiner de barras de progresso -->
+            <div class="progress-container" id="uploadProgressContainer">
+                <label>Upload:</label>
+                <progress id="uploadProgressBar" value="0" max="100"></progress>
+                <p id="uploadProgressMessage"></p>
+            </div>
+
+            <div class="progress-container" id="conversionProgressContainer">
+                <label>Conversão:</label>
+                <progress id="conversionProgressBar" value="0" max="100"></progress>
+                <p id="conversionProgressMessage"></p>
+            </div>
+
+            <div class="progress-container" id="transcriptionProgressContainer">
+                <label>Transcrição:</label>
+                <progress id="transcriptionProgressBar" value="0" max="100"></progress>
+                <p id="transcriptionProgressMessage"></p>
+            </div>
+        </div>
+
+        <!-- Resultado da transcrição -->
+        <div id="resultSection" style="display: none;">
+            <h2>Resultado da Transcrição:</h2>
+            <textarea id="transcriptionResult" readonly></textarea>
+        </div>
+
+        <!-- Botão para resetar -->
+        <button id="resetBtn" style="display: none;">Zerar Campos</button>
+    </div>
+
+    <script src="https://cdn.socket.io/4.5.0/socket.io.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

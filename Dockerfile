@@ -32,4 +32,4 @@ COPY . .
 # EXPOSE 5151
 
 # Comando para rodar sua aplicação (ajuste conforme necessário)
-CMD ["python", "main.py"]
+CMD ["python", "app/app.py"]

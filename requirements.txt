@@ -2,3 +2,4 @@ flask
 pydub
 speechrecognition
 python-dotenv
+flask-socketio
