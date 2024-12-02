@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .  # Use o Dockerfile localizado no diretório atual
+    container_name: API-Transc
+    restart: always  # Garante que o container seja reiniciado sempre que necessário
+

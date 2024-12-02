@@ -1,0 +1,4 @@
+flask
+pydub
+speechrecognition
+python-dotenv
