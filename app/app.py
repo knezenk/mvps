@@ -61,4 +61,4 @@ def process_file(input_file, wave_file, socketio):
         socketio.emit('progress', {'step': 'error', 'progress': 100, 'message': f'Erro: {str(e)}'})
 
 if __name__ == '__main__':
-    socketio.run(app, host='0.0.0.0', port=5000, debug=True, allow_unsafe_werkzeug=True)
+    socketio.run(app, host='0.0.0.0', port=1066, debug=True, allow_unsafe_werkzeug=True)
