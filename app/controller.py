@@ -41,7 +41,7 @@ class TranscriptionController:
         recognizer = sr.Recognizer()
         audio = AudioSegment.from_wav(wave_file)
         passo = 10 * 1000  # Intervalos de 10 segundos
-        sobreposicao = 1 * 1000  # Sobreposição de 1 segundo
+        sobreposicao = 2 * 1000  # Sobreposição de 1 segundo
         transcript = ""
         
         total_segments = (len(audio) + passo - 1) // passo  # Calcula quantas partes existem no áudio

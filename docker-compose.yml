@@ -5,7 +5,7 @@ services:
     build:
       context: .  # Use o Dockerfile localizado no diretório atual
     ports:
-      - "5000:5000"
+      - "1066:1066"
     container_name: API-Transc
     restart: always  # Garante que o container seja reiniciado sempre que necessário
 
